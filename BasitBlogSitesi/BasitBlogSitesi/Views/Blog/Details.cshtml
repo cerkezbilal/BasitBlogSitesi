@@ -1,0 +1,86 @@
+﻿@model BasitBlogSitesi.Models.Blog
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<h1>@Model.Baslik</h1>
+<hr />
+<p>
+    <span class="glyphicon glyphicon-time"></span>
+    @Model.EklenmeTarihi
+</p>
+<hr />
+<img class="img-responsive" src="http://placehold.it/900x300" alt="" />
+<hr />
+<blockquote>
+    <p>@Model.Aciklama</p>
+</blockquote>
+<hr />
+<p>
+    @Model.Icerik
+</p>
+<div class="coment">
+    <div class="well">
+        <h4>Yorum Yap:</h4>
+        <form role="form">
+            <div class="form-group">
+                <textarea class="form-control" rows="3"></textarea>
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+
+
+
+<div class="media">
+    <div class="media-left">
+        <a href="#"><img src="https://via.placeholder.com/64" class="media" alt="..."></a><span style="margin-right:5px; margin-left:5px;">Top-aligned media</span><span style="opacity:0.4">@Model.EklenmeTarihi</span>
+        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    </div>
+
+</div>
+
+
+<div class="media">
+    <div class="media-left">
+        <a href="#"><img src="https://via.placeholder.com/64" class="media" alt="..."></a><span style="margin-right:5px; margin-left:5px;">Top-aligned media</span><span style="opacity:0.4">@Model.EklenmeTarihi</span>
+        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    </div>
+
+</div>
+
+<div class="media">
+    <div class="media-left">
+        <a href="#"><img src="https://via.placeholder.com/64" class="media" alt="..."></a><span style="margin-right:5px; margin-left:5px;">Top-aligned media</span><span style="opacity:0.4">@Model.EklenmeTarihi</span>
+        <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
+    </div>
+
+</div>
+
+
+
+
+@section SagKolon{
+    <div class="well">
+        <h4>Blog Arama</h4>
+        <div class="input-group">
+            <input type="text" class="form-control" />
+            <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
+        </div>
+    </div>
+
+    @{Html.RenderAction("KategoriListesi", "Category");}
+}
+
+
+
+
+
